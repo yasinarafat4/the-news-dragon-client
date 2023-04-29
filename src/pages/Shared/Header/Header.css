@@ -1,0 +1,24 @@
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-text:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
