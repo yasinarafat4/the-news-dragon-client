@@ -23,7 +23,7 @@ const RightNav = () => {
         </Button>
       </div>
       <div className="mt-3">
-        <h4>Find Us On</h4>
+        <h4 className="mt-4">Find Us On</h4>
         <ListGroup>
           <ListGroup.Item>
             <FaFacebookF style={{ color: "#3B599C" }} /> FaceBook

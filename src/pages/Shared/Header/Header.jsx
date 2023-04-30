@@ -4,6 +4,7 @@ import moment from "moment";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -51,18 +52,24 @@ const Header = () => {
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
-              <Nav.Link href="#pricing">Career</Nav.Link>
+            <Nav className="mx-auto gap-lg-4">
+              <Link className="text-decoration-none" to="/">
+                Home
+              </Link>
+              <Link className="text-decoration-none" to="">
+                About
+              </Link>
+              <Link className="text-decoration-none" to="">
+                Career
+              </Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">Profile</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+              <Link className="text-decoration-none me-4">Profile</Link>
+              <Link>
                 <Button className="px-5" variant="dark">
                   Login
                 </Button>
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
