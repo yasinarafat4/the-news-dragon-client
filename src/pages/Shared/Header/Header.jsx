@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import logo from "../../../assets/logo.png";
 import moment from "moment";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import "./Header.css";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -48,32 +47,6 @@ const Header = () => {
           Withdraws from Wimbledon !
         </Marquee>
       </div>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-        <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto gap-lg-4">
-              <Link className="text-decoration-none" to="/">
-                Home
-              </Link>
-              <Link className="text-decoration-none" to="">
-                About
-              </Link>
-              <Link className="text-decoration-none" to="">
-                Career
-              </Link>
-            </Nav>
-            <Nav>
-              <Link className="text-decoration-none me-4">Profile</Link>
-              <Link>
-                <Button className="px-5" variant="dark">
-                  Login
-                </Button>
-              </Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
     </Container>
   );
 };
